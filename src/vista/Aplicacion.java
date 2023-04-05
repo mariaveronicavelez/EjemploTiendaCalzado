@@ -1,23 +1,24 @@
 package vista; //te esta diciendo el package que pertenece la clase :D
 //linkea :D
 import modelo.Calzado;
+import modelo.Deportivo;
 import modelo.Producto;
+import modelo.Hombre;
+import modelo.Mujer;
 //Los modificadores de acceso definen el como acceso a las clases/Atributos/metodos
 public class Aplicacion { //Define la estructura de la clase
     public static void main(String [] args){
-        //Instanciar un objeto de tipo producto
-        //Constructor
-        Producto producto = new Producto();
-        producto.stock = 100;
-        producto.codigo = "123ABC";
-        producto.valorBase = 10000;
 
-        Calzado calzado = new Calzado();
+        Deportivo deportivo = new Deportivo (new Producto( "123ABC",100,10000),44,"Semana","Futbol","Cuero");
 
-        calzado.producto = producto;
+        Deportivo deportivo2 = new Deportivo();
 
-        System.out.println("Codigo producto: "+ calzado.producto.codigo);
-        System.out.println("Stock producto: "+ calzado.producto.stock);
+        Hombre hombre = new Hombre ();
+
+
+
+        System.out.println("el valor venta del calzado deportivo durante la " + deportivo.getDiaVenta() + "es: $ "+ deportivo.valorVenta());
+
 
     }
 }
